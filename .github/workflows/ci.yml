@@ -10,6 +10,9 @@ on:
 jobs:
     files-check:
         runs-on: ubuntu-latest
+        defaults:
+          run: 
+            working-directory: src  
 
         steps:
             - name: Checkout repository
