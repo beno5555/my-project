@@ -8,7 +8,7 @@ on:
     workflow_dispatch:
 
 jobs:
-    hello:
+    files-check:
         runs-on: ubuntu-latest
 
         steps:
@@ -17,6 +17,9 @@ jobs:
 
             - name: Check index.html
               run: test -f index.html
+
+            - name: Check feed.html
+              run: test -f feed.html
 
             - name: Say hello
               run: echo "Hello from Github Actions !"
