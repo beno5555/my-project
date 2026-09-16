@@ -18,20 +18,68 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v7
 
+              
             - name: Check index.html
               run: test -f index.html
+
+            - name: Check main.css
+              run: test -f main.css
+
+            - name: Check main.js
+              run: test -f main.js
+              
+            - name: Check comment section folder
+              run: test -d comment-section
+
+            - name: Check error page folder
+              run: test -d error-page
+
+            - name: Check feed folder
+              run: test -d feed
+
+            - name: Check inbox folder
+              run: test -d inbox
+
+
+              
+            - name: Check comment-section.html
+              run: test -f comment-section/comment-section.html
+
+            - name: Check comment-section.css
+              run: test -f comment-section/comment-section.css
+
+            - name: Check comment-section.js
+              run: test -f comment-section/comment-section.js
+            
+
+            - name: Check error-page.html
+              run: test -f error-page/error-page.html
+
+            - name: Check error-page.css
+              run: test -f error-page/error-page.css
+
+            - name: Check error-page.js
+              run: test -f error-page/error-page.js
+
 
             - name: Check feed.html
               run: test -f feed/feed.html
 
-            - name: Say hello
-              run: echo "Hello from Github Actions !"
+            - name: Check feed.css
+              run: test -f feed/feed.css
 
-            - name: Show current directory
-              run: pwd
+            - name: Check feed.js
+              run: test -f feed/feed.js
 
-            - name: Show files
-              run: ls -la
+              
+            - name: Check inbox.html
+              run: test -f inbox/inbox.html
+
+            - name: Check inbox.css
+              run: test -f inbox/inbox.css
+
+            - name: Check inbox.js
+              run: test -f inbox/inbox.js
 
             - name: Success
-              run: echo "Website validation successful!"
+              run: echo "File & Folder check successful!"
